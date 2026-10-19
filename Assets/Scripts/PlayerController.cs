@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
         
     }
 
-    void onMove(InputValue value)
+    void OnMove(InputValue value)
     {
         moveValue = value.Get<Vector2>();
     }
@@ -29,6 +29,6 @@ public class PlayerController : MonoBehaviour
     {
         Vector3 movement = new Vector3(moveValue.x, 0.0f, moveValue.y);
         
-        GetComponent<Rigidbody2D>().AddForce(movement * speed * Time.fixedDeltaTime);
+        GetComponent<Rigidbody>().AddForce(movement * speed * Time.fixedDeltaTime);
     }
 }
